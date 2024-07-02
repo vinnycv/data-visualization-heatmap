@@ -1,0 +1,9 @@
+get display box off border... or just remove the chart border?
+
+all the smaller text seems too small
+
+make responsive?
+
+restructure js files
+
+fix positioning of tooltip
