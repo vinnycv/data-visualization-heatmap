@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import 'style.css';
+import '/style.css';
 
 const margin = {top: 100, right: 40, bottom: 130, left: 65};
 const h = 400 + margin.top + margin.bottom;
