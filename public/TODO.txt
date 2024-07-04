@@ -1,9 +1,15 @@
-get display box off border... or just remove the chart border?
+*get display box off border... or just remove the chart border?
 
-all the smaller text seems too small
+INP resize text - all the smaller text seems too small
+    when I make the months text bigger it get cut off but can't seem to figure out how to make the
+    chart wider to fit it. 
 
 make responsive?
 
 restructure js files
 
 fix positioning of tooltip
+
+tipLegend - 'year - month' 'Global avg surface temp' 'Variance from base temp of 8.66C'
+
+set ids/classes in js then do all styling in css

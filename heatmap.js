@@ -11,8 +11,8 @@ const url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData
                   .append('svg')
                   .attr('id', 'chart')
                   .attr('height', h)
-                  .attr('width', w)
-                  .style('border', 'solid');
+                  .attr('width', w);
+                  // .style('border', 'solid');
   
   // TITLES - create and place titles
   const graphTitle = chart.append('text')
@@ -21,21 +21,21 @@ const url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData
                           .attr('x', w/2)
                           .attr('text-anchor', 'middle')
                           .text("Global Surface Temperature");
+
+  const subtitle = chart.append('text')
+                          .attr('id', 'description')
+                          .attr('x', w/2)
+                          .attr('y', margin.top - 22)
+                          .attr('text-anchor', 'middle')
+                          .text("1753 - 2015");
   
   const xTitle = chart.append('text')
                       .attr('id', 'x-title')
                       .attr('y', h - margin.bottom/1.8)
                       .attr('x', w/2)
                       .attr('text-anchor', 'middle')
+                      .style("font-size", "20px")
                       .text("Years");
-
-const subtitle = chart.append('text')
-                      .attr('id', 'description')
-                      .attr('x', w/2)
-                      .attr('y', margin.top - 22)
-                      .attr('text-anchor', 'middle')
-                      .text("1753 - 2015");
-
 
 // TOOLTIP
 const tooltip = d3.select("#container")
@@ -47,7 +47,7 @@ const tooltip = d3.select("#container")
 const tipLegend = d3.select('#container')
                        .append('div')
                        .attr('id', 'tooltip-legend')
-                       .style('transform', `translate(500px, 265px)`)
+                       .style('transform', `translate(500px, 280px)`)
                        .html(
                           "Date"
                           + "<br>"
@@ -107,6 +107,7 @@ function callback(data) {
   
   // append x axis to chart
   chart.append('g')
+       .style("font-size", "14px")
        .call(xAxis)
        .attr('id', 'x-axis')
        .style('transform', `translateY(${h - margin.bottom}px`);
@@ -125,6 +126,7 @@ function callback(data) {
                   
   // append y axis to chart
   chart.append('g')
+       .style("font-size", "11px")
        .call(yAxis)
        .attr('id', 'y-axis')
        .style('transform', `translateX(${margin.left}px)`);
