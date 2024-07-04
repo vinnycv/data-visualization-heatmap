@@ -13,3 +13,13 @@ fix positioning of tooltip
 tipLegend - 'year - month' 'Global avg surface temp' 'Variance from base temp of 8.66C'
 
 set ids/classes in js then do all styling in css
+
+*resize window issue - when I resize the window then scroll to see the rest of the chart, the 
+    container cuts off the chart and you can't see it, with also a white background starting 
+    at the cut.
+    FIX - the height/width alone as 100% or 100vw/100vh will size the container off the resized
+        window, since it's smaller, the container is smaller too and can't fit the chart so it 
+        gets cut off and the background is white becuase you're scrolling outside the container 
+        and seeing the body. +Could add a backup bg color to the body.  
+        
+vertical resize issue - will cut off top for some reason even with min-height: fit-content
